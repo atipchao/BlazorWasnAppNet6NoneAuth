@@ -15,8 +15,4 @@
     <ProjectReference Include="..\Shared\BlazorWasnAppNet6NoneAuth.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\People\" />
-  </ItemGroup>
-
 </Project>
