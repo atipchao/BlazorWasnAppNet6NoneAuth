@@ -5,19 +5,8 @@
 
 <h3>Create New Person</h3>
 
-<EditForm Model="@person" OnValidSubmit="@CreatePerson">
-    <DataAnnotationsValidator />
-    <div class="form-field" >
-        <label>Name:</label>
-        <div>
-            <InputText @bind-Value="@person.Name" />
-            <ValidationMessage For="@(() => person.Name)" />
-        </div>
-    </div>
-    <button type="submit" class="btn btn-success" >
-        Create Person
-    </button>
-</EditForm>
+<PersonForm ButtonText="Create Person" person="@person" OnValidSubmit="@CreatePerson" />
+
 @if (null == null)
 {
     <text>Loading...</text>

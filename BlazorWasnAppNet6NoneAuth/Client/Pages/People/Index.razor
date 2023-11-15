@@ -1,5 +1,6 @@
 ﻿@page "/people"
 @inject HttpClient http
+@inject IJSRuntime js
 
 <h3>People</h3>
 
@@ -30,8 +31,8 @@ else
             {
                 <tr>
                     <td>
-                        <a class="btn btn-success">Edit</a>
-                        <button class="btn btn-danger">Delete</button>
+                        <a class="btn btn-success" href="people/edit/@person.Id">Edit</a>
+                        <button class="btn btn-danger" @onclick="@(() => DeletePerson(person.Id))">Delete</button>
                     </td>
                     <td>@person.Id</td>
                     <td>@person.Name</td>
@@ -44,6 +45,7 @@ else
 @code {
     Person[] people{ get; set; }
 
+    //this line below is just like the ole OnLoad() from the WebForm days back. 
     protected override async Task OnInitializedAsync()
     {
         await LoadPeople();
@@ -57,4 +59,23 @@ else
         //     new Person(){Id = 2, Name="Test 2"}
         // };
     }
+
+
+    async Task DeletePerson(int personId)
+    {
+        // Add Javascript delete confirmation
+
+        var selectedPerson = people.FirstOrDefault(s => s.Id == personId);
+        if (selectedPerson != null)
+        {
+            if (await js.InvokeAsync<bool>("confirm", $"Do you want to delete: {selectedPerson.Name}?"))
+            {
+                await http.DeleteAsync($"api/people/{personId}");
+                await LoadPeople();
+            }
+        }
+
+    }
+
+
 }

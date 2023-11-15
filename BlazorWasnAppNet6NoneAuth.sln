@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34227.203
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasnAppNet6NoneAuth.Server", "BlazorWasnAppNet6NoneAuth\Server\BlazorWasnAppNet6NoneAuth.Server.csproj", "{77C6ABB8-AE71-4D72-95A8-E0955CFD6B8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasnAppNet6NoneAuth.Server", "BlazorWasnAppNet6NoneAuth\Server\BlazorWasnAppNet6NoneAuth.Server.csproj", "{77C6ABB8-AE71-4D72-95A8-E0955CFD6B8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasnAppNet6NoneAuth.Client", "BlazorWasnAppNet6NoneAuth\Client\BlazorWasnAppNet6NoneAuth.Client.csproj", "{C3B08DB1-584B-4890-A7D3-284B42A06600}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasnAppNet6NoneAuth.Client", "BlazorWasnAppNet6NoneAuth\Client\BlazorWasnAppNet6NoneAuth.Client.csproj", "{C3B08DB1-584B-4890-A7D3-284B42A06600}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWasnAppNet6NoneAuth.Shared", "BlazorWasnAppNet6NoneAuth\Shared\BlazorWasnAppNet6NoneAuth.Shared.csproj", "{8FFE12A5-0F2A-4525-A997-C2B9FA931AB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWasnAppNet6NoneAuth.Shared", "BlazorWasnAppNet6NoneAuth\Shared\BlazorWasnAppNet6NoneAuth.Shared.csproj", "{8FFE12A5-0F2A-4525-A997-C2B9FA931AB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
